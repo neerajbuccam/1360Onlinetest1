@@ -24,14 +24,19 @@ public class Control_Unit {
 		return total_votes;
 	}
 
-	public void resetCounters() {
-		total_votes = 0;
-		
-		Balloting_Unit BU = Balloting_Unit.create_BU(ballot_buttons);
-		
-		for(int i=0; i<ballot_buttons; i++){
-			BU.Blue_button[i].party_vote = 0;	
+	public int resetCounters() {
+		try{
+			total_votes = 0;
+			
+			Balloting_Unit BU = Balloting_Unit.create_BU(ballot_buttons);
+			
+			for(int i=0; i<ballot_buttons; i++){
+				BU.Blue_button[i].party_vote = 0;	
+			}
+			return 0;
 		}
-		
+		catch(Exception e){
+			return 1;
+		}
 	}
 }

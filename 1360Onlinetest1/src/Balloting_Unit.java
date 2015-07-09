@@ -12,6 +12,7 @@ public class Balloting_Unit {
 		
 		set_Buttons(btn);
 	}
+	
 	public static Balloting_Unit create_BU(int btn){
 		if(instance == null){
 			instance = new Balloting_Unit(btn);
