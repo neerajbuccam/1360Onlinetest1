@@ -1,14 +1,23 @@
 
 public class Balloting_Unit {
 
+	private static Balloting_Unit instance=null;
 	public Button []Blue_button;
 	public String []Party;
 	
-	public Balloting_Unit(int btn) {
+	private Balloting_Unit(int btn) {
 		Blue_button = new Button[btn];
 		Party = new String[btn];
 		
 		set_Buttons(btn);
+	}
+	public static Balloting_Unit create_BU(int btn){
+		if(instance == null){
+			instance = new Balloting_Unit(btn);
+			return instance;
+		}
+		else
+			return instance;
 	}
 
 	private void set_Buttons(int btn) {

@@ -16,4 +16,8 @@ public class Control_Unit {
 		else
 			return instance;
 	}
+	
+	public int getTotalVotes(){
+		return total_votes;
+	}
 }
