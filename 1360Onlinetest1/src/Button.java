@@ -7,10 +7,10 @@ public class Button {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public int cast_vote(){
+	public int cast_vote(int ballot_btns){
 		try{
 			party_vote++;
-			Control_Unit CU = Control_Unit.create_CU();
+			Control_Unit CU = Control_Unit.create_CU(ballot_btns);
 			CU.total_votes++;
 			return 0;
 		}

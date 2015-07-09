@@ -4,6 +4,7 @@ public class Balloting_Unit {
 	private static Balloting_Unit instance=null;
 	public Button []Blue_button;
 	public String []Party;
+	public boolean close_btn_pressed=false;
 	
 	private Balloting_Unit(int btn) {
 		Blue_button = new Button[btn];
@@ -19,6 +20,11 @@ public class Balloting_Unit {
 		else
 			return instance;
 	}
+	
+	public int closePoll(){
+		close_btn_pressed = true;
+		return 0;
+	}
 
 	private void set_Buttons(int btn) {
 
@@ -29,6 +35,5 @@ public class Balloting_Unit {
 		for(int i=0; i<btn; i++){
 			Blue_button[i] = new Button();
 		}
-		
 	}
 }
